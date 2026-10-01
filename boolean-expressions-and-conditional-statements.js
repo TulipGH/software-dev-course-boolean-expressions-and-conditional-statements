@@ -42,6 +42,39 @@ if (choice === "mountains" && hasTorch) {
   console.log("You get lost and wander aimlessly.");
 }
 
+if (choice === "mountains" && hasTorch) {
+  console.log("You see a large castle in the distance");
+  const doorOrAround = readline.question("Do you go to the castle 'door' or go 'around'? ");
+  if (doorOrAround === 'door') {
+    console.log("As you approach the door you find a hammer.");
+    const hammerQuestion = readline.question("Do you pick it up? 'yes' or 'no' ");
+    if (hammerQuestion === 'yes') {
+      console.log("You pick up the hammer and refurbish the castle to make yours!");
+    } else {
+      console.log("You leave the hammer and take advantage of the temporary shelter.");
+    }
+  } else if (doorOrAround === 'around') {
+    console.log("As you make your way around the castle you get lost and wander for the rest of time.");
+  } else {
+    console.log("You hesitate and the castle fades into the night with you along side it.");
+  }
+}
+
+if (choice === "village" && hasTorch) {
+  console.log("As you arrive at the village the sun starts to set");
+  const restOrFire = readline.question("Do you take 'shelter' or make a 'bonfire'? ");
+  if (restOrFire === "shelter") {
+    console.log("You rest safely in the village for the night to continue on your journey.");
+  } else if (restOrFire === "bonfire") {
+    console.log("You gather wood and build a bonfire, warming the desolate village.");
+  } else {
+    console.log("You stand in the village unsure of what to do.");
+  }
+}
+
+
+
+
 /* 
 
 Add Customization and expand the game:
